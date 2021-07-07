@@ -1,0 +1,10 @@
+Expr      ->    Term ExprTail
+ExprTail  ->    + Term ExprTail
+ExprTail  ->    - Term ExprTail
+ExprTail  ->    null
+Term      ->    Factor TermTail
+TermTail  ->    * Factor TermTail
+TermTail  ->    / Factor TermTail
+TermTail  ->    null
+Factor    ->    (Expr)
+Factor    ->    num
